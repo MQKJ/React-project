@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Background from './img/timg.jpg';
 import './App.css';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom'; // 导入的方式跟之前有点变化
 
 
-
+var sectionStyle = {
+// makesure here is String确保这里是一个字符串，以下是es6写法
+  backgroundImage: `url(${Background})` 
+}
 class Apps extends Component {
   render() {
     return (
@@ -72,7 +76,7 @@ class MtLists extends Component {
   render() {
     return (
       <div className="MtLists">
-        <div className='ImgBx'>
+        <div className='ImgBx' style={sectionStyle}>
           <p >"西瑞士"女性方案{this.props.name}</p>
         </div>
         <div className='listBx'>
